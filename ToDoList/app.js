@@ -1,18 +1,32 @@
+// selectors
+
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
+//listeners
+
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 
+//functions
+
 function addTodo(e) {
   e.preventDefault();
+
+  //creating wrapper div
+
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
+
+  //creating todo element
+
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
+
+  //creating buttons
 
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fas fa fa-check"></i>';
@@ -28,6 +42,7 @@ function addTodo(e) {
 
   todoInput.value = "";
 }
+
 function deleteCheck(e) {
   const item = e.target;
 

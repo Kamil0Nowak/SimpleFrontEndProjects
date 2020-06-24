@@ -55,6 +55,9 @@ form button:hover {
   min-width: 30%;
   list-style: none;
 }
+
+/* styles for generated content */
+
 .todo {
   margin: 0.5rem;
   background: white;
@@ -94,7 +97,3 @@ form button:hover {
   opacity: 0;
   transform: translateY(5rem) rotate(40deg);
 }
-
-/* select{
-    -webkit-appearance: none;
-} */
