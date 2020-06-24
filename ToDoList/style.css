@@ -63,21 +63,38 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 .todo li {
   flex: 1;
 }
 .trash-btn,
-.complete-btn {
+.completed-btn {
   background: #ff6f47;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
 }
-.complete-btn {
+.completed-btn {
   background: rgb(128, 194, 62);
 }
 .todo-item {
   padding: 0rem 0.5rem;
 }
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.fall {
+  opacity: 0;
+  transform: translateY(5rem) rotate(40deg);
+}
+
+/* select{
+    -webkit-appearance: none;
+} */
